@@ -1,0 +1,15 @@
+{
+    "name": "user/jjgrainger-plugin",
+    "authors": [
+        {
+            "name": "Joe Grainger",
+            "email": "josephgrainger@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Plugin\\": "app/"
+        }
+    },
+    "require": {}
+}
