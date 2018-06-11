@@ -11,3 +11,5 @@ zip -r ${PLUGIN_NAME}.zip . -x *.git* *.DS_Store* *.travis.yml* '*script/*'
 
 mkdir build
 mv ${PLUGIN_NAME}.zip build/${PLUGIN_NAME}.zip
+
+ls buld
