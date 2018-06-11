@@ -9,7 +9,7 @@ echo "zipping ${PLUGIN_NAME} v${PLUGIN_VERSION}"
 # zip everything in the current directory
 zip -r ${PLUGIN_NAME}.zip . -x *.git* *.DS_Store* *.travis.yml* '*script/*'
 
-mkdir build
-mv ${PLUGIN_NAME}.zip build/${PLUGIN_NAME}.zip
+mkdir _build
+mv ${PLUGIN_NAME}.zip _build/${PLUGIN_NAME}.zip
 
-ls buld
+ls _build
