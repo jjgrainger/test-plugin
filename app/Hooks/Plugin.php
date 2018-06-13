@@ -81,7 +81,7 @@ class Plugin
         $res->plugin = "{$this->slug}/{$this->slug}.php"; // it could be just YOUR_PLUGIN_SLUG.php if your plugin doesn't have its own directory
         $res->new_version = '1.1';
         $res->tested = '4.9.6';
-        $res->package = 'https://plugins.jjgrainger.co.uk/test-plugin/test-plugin-1.1.zip';
+        $res->package = 'https://plugins.jjgrainger.co.uk/test-plugin/v1.1.zip';
         $res->url = 'https://jjgrainger.co.uk';
 
         $transient->response[$res->plugin] = $res;

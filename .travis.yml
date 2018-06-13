@@ -10,15 +10,10 @@ before_script:
 script:
 - "./script/build"
 deploy:
-  skip_cleanup: true
-  provider: s3
-  access_key_id: AKIAIJTJLAFQMZFNTA4A
-  secret_access_key:
-    secure: gNBP7J+UU7VGGsvZWZxMbRDcIMgScxnK0jZkYHODXB6IVRdFyrajtmAMeyXjry8hvXDJFg5zKruNNQrLAgQTKOZ7uIfT64sopvLxdIvUmpoiCAwhclSy5i+t+9zkCcGVIEr4Rp+dHM5/h60vj2MOF0ah+9eCqnI0df3pGD3W7RqCLDW6EaGwrWJripNCT3Jmj8J+bSXxbVtYbghkl/B564NgCDYkfAhAXazgZ1z5dIrAlyEznhqhDZGF+zO45dN9fWs9diqPM9TKPPMMgvlVvMjx+o9ZxIdgoev7zmCgW5FaLPW2OqCnydsN7XIZxx91/ocNTpzBKeYJk2X7EFIxAElq1i+Ws3HJjiVYvly4qBnTXVymxw+Fi8TXcBiM6y8Ozz+LixeCIQZt2OUfANxkk1gVv/PaUtdPajJ8v4I5/LmMxMKzdj2kwBnK05uSnYOx0buuBiO8dpn/uPnlC/Vd5KjDR/rmod+/tVVYIC4zXM216xcpjXasSibTglQ5nF6Xr5h+MMqNkOtdJA3LDJynpg7FEkC+Cfx5msy2Aew0XEH6f/6haf4w/HOplScZoI5HH5uSK79RPPnQ/CkfuapycnWZFyNEtnLHKEcNV/X3LoLoj6XK4aFZFAugnR3tVbpxPCbwCchhMIja3TtLA4u20HDIUNO5x9PbDhioL5FfP+E=
-  bucket: plugins.jjgrainger.co.uk
-  upload-dir: test-plugin
-  local_dir: _build
-  acl: 'public_read'
-  region: us-west-2
+  provider: releases
+  api_key:
+    secure: EfI+2quv4IR5VmfGr36gObGdO3uqm12Lzbp6FRoUDp0uyW/b89DyG65kXScHqWH+OyV9Ewdyg/ynpGlmsr2/9cHpqwlS9ygiDXzo5bDFovXM+LFtcbXIkdfCo+Nx1bLaSYHtu/VcvTl7nQtlsH50ja0dCjKS5JBdtOQrtPYFgUvqaDlW4CnjHmbEdqcq8OJjuE+Yfu/USHazsLElXDPuKqNVZKpdPauN72sRm+H7PliirTLwk6FcgHeWmVxymiM+Pwk1CL9Snq+DaY6dqZQ1YS+4wHHUgor9hp/Y76Fayv7Gy6N0XtD/ooQh6A5ZWmCckT1Snm/PQjMMHJxR8giM9GqSO6wFBfu0XcWQx1rEywVTW/ElRDN7oB+YuPx/a5vzJIMIyN8cs/pCAhZiIje8et/RTR4uBCEppF0T1LF5CZEusYcvgk02H5jgrK8zIMFBojycdxrJE60Lv/uTZcl7vrRzMetkaAi2nihlQMwB3iifXonEwdGP2FGL2lOzIeFMNAFY2EnpHYZB2Yv7bvvq1Icg/1mzdnVcsuxyghvaJw+8XQjzpPXwaklHKMDIsTSWNclBRDm+RdhahbnTODT8uJs2+pTk5Hpa2LOmXznHfkpOxK27MAEBYc1QvUxVigcBgZRizvZt+itBuvMbITdKSVE/kvLXcjIZdExYVcGMV4o=
+  file: _build/jjgrainger-plugin.zip
   on:
+    tags: true
     repo: jjgrainger/test-plugin
