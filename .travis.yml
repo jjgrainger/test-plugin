@@ -11,6 +11,7 @@ script:
 - "./script/build"
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: EfI+2quv4IR5VmfGr36gObGdO3uqm12Lzbp6FRoUDp0uyW/b89DyG65kXScHqWH+OyV9Ewdyg/ynpGlmsr2/9cHpqwlS9ygiDXzo5bDFovXM+LFtcbXIkdfCo+Nx1bLaSYHtu/VcvTl7nQtlsH50ja0dCjKS5JBdtOQrtPYFgUvqaDlW4CnjHmbEdqcq8OJjuE+Yfu/USHazsLElXDPuKqNVZKpdPauN72sRm+H7PliirTLwk6FcgHeWmVxymiM+Pwk1CL9Snq+DaY6dqZQ1YS+4wHHUgor9hp/Y76Fayv7Gy6N0XtD/ooQh6A5ZWmCckT1Snm/PQjMMHJxR8giM9GqSO6wFBfu0XcWQx1rEywVTW/ElRDN7oB+YuPx/a5vzJIMIyN8cs/pCAhZiIje8et/RTR4uBCEppF0T1LF5CZEusYcvgk02H5jgrK8zIMFBojycdxrJE60Lv/uTZcl7vrRzMetkaAi2nihlQMwB3iifXonEwdGP2FGL2lOzIeFMNAFY2EnpHYZB2Yv7bvvq1Icg/1mzdnVcsuxyghvaJw+8XQjzpPXwaklHKMDIsTSWNclBRDm+RdhahbnTODT8uJs2+pTk5Hpa2LOmXznHfkpOxK27MAEBYc1QvUxVigcBgZRizvZt+itBuvMbITdKSVE/kvLXcjIZdExYVcGMV4o=
   file: _build/jjgrainger-plugin.zip
